@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiTextSharedFromDifferentApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiTextSharedFromDifferentApp"
+    Shell.FlyoutBehavior="Flyout"
+    Title="MauiTextSharedFromDifferentApp">
+
+    <FlyoutItem Title="Home" Route="MainPageRoute">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Sharing from another app" Route="ShowTextFromAnotherAppPageRoute" x:Name="ShowTextFromAnotherAppPageFlyoutItem">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:ShowTextFromAnotherAppPage}" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>
